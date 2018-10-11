@@ -21,6 +21,7 @@ services:
     environment: 
       - "TUNNELHOST=someserver.tld"
       - "TUNNELHOSTPORT=22"
+      - "TARGETHOST=${TARGETHOST}"
       - "TARGETPORT=389"
       - "LISTENPORT=389"
       - "TUNNELUSER=userOnTunnelHost"
@@ -36,6 +37,9 @@ Replace myprivate.key with filename of your real key.
 ##### TUNNELHOSTPORT
 - => specify port of target SSH server.
 
+##### TARGETHOST
+- => specify target hostname that the target SSH server should connect to.
+
 ##### TARGETPORT
 - => specify target port that the target SSH server should connect to.
 
@@ -46,3 +50,5 @@ Replace myprivate.key with filename of your real key.
 ##### LISTENHOST
 - *empty* => listens locally on `0.0.0.0`
 - => specify address to locally bind
+
+
