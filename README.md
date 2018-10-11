@@ -1,6 +1,6 @@
 # SSH tunnel client
 
-Creates an SSH tunnel to another SSH server. Companion for zokradonh/sshtunnelserver.
+Creates an SSH tunnel to another SSH server. Companion for zokradonh/ssh-tunnel-server.
 
 Usage
 =======
@@ -16,7 +16,7 @@ version: '2'
 
 services:
   tunnel:
-    image: zokradonh/sshtunnelclient
+    image: zokradonh/ssh-tunnel-client
     restart: always
     environment: 
       - "TUNNELHOST=someserver.tld"
